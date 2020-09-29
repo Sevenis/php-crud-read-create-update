@@ -22,9 +22,14 @@
                         <td><?php echo $room['id']; ?></td>
                         <td><?php echo $room['room_number']; ?></td>
                         <td><?php echo $room['floor']; ?></td>
-                        <td><a href="#">VIEW</a></td>
+                        <td><a href="show.php?id=<?php echo $room['id']; ?>">VIEW</a></td>
                         <td><a href="#">UPDATE</a></td>
-                        <td><a href="#">DELETE</a></td>
+                        <td>
+                            <form class="" action="partials/delete/server.php" method="post">
+                                <input type="submit" name="" value="X" class="btn btn-sm btn-danger">
+                                <input type="hidden" name="id" value="<?php echo $room['id']; ?>">
+                            </form>
+                        </td>
                     </tr>
                     <?php } ?>
                 </tbody>
