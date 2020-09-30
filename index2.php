@@ -5,12 +5,15 @@
  ?>
 
         <div class="container">
-            <?php if(!empty($_GET['roomId'])) {
+            <!-- Alert in caso di cancellazione stanza
+            segnalando il nr della stanza cancellata -->
+            <?php if(!empty($_GET['roomNr'])) {
                 $stanza_cancellata = $_GET['roomNr'];  ?>
                 <div class="alert alert-warning">
                     <?php echo "Hai cancellato la stanza nr. $stanza_cancellata"; ?>
                 </div>
             <?php } ?>
+            <!-- fine alert -->
 
             <table class= "table">
                 <thead>
