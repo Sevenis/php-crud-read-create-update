@@ -27,7 +27,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($result as $room) {?>
+                    <?php foreach($results as $room) {?>
                     <tr>
                         <td><?php echo $room['id']; ?></td>
                         <td><?php echo $room['room_number']; ?></td>

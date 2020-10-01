@@ -17,7 +17,8 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-link active" href="index2.php">Stanze</a>
+                    <a class="nav-link active" href="index2.php">Visualizza stanze</a>
+                    <a class="nav-link active" href="create.php">Inserisci stanza</a>
                 </div>
               </div>
             </nav>

@@ -1,7 +1,7 @@
 <?php
 include __DIR__ . '/../database.php';
 
-$sql = "UPDATE stanze SET room_number = ?, beds = ?, floor = ? WHERE id = ?";
+$sql = "UPDATE stanze SET room_number = ?, beds = ?, floor = ?, updated_at = NOW() WHERE id = ?";
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param('iiii', $roomNumber, $beds, $floor, $id);
@@ -21,4 +21,5 @@ if($stmt && $stmt->affected_rows > 0) {
     die('ERRORE! Hai provato ad inserire un dato non valido.');
 }
 
+$stmt->close();
 $conn->close();
